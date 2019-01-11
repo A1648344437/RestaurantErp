@@ -1,0 +1,14 @@
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\bin\Release\netcoreapp2.1\RestaurantErp.deps.json
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\bin\Release\netcoreapp2.1\RestaurantErp.runtimeconfig.json
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\bin\Release\netcoreapp2.1\RestaurantErp.runtimeconfig.dev.json
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\bin\Release\netcoreapp2.1\RestaurantErp.dll
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\bin\Release\netcoreapp2.1\RestaurantErp.pdb
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.csprojAssemblyReference.cache
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.csproj.CoreCompileInputs.cache
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.RazorAssemblyInfo.cache
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.RazorAssemblyInfo.cs
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.AssemblyInfoInputs.cache
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.AssemblyInfo.cs
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.RazorTargetAssemblyInfo.cache
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.dll
+C:\Users\new\source\repos\RestaurantErp\RestaurantErp\obj\Release\netcoreapp2.1\RestaurantErp.pdb

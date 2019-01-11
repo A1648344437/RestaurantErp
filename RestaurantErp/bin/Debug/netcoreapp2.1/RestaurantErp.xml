@@ -1,0 +1,658 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RestaurantErp</name>
+    </assembly>
+    <members>
+        <member name="T:RestaurantErp.AutoMapper.CustomProfile">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.AutoMapper.CustomProfile.#ctor">
+            <summary>
+            配置构造函数，用来创建关系映射
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Common.CommonHepler">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Common.SerializeHelper">
+            <summary>
+            序列化与序列化
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Common.SerializeHelper.Serialize(System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Common.SerializeHelper.Deserialize``1(System.String)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="TEntity"></typeparam>
+            <param name="jsonString"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RestaurantErp.Controllers.GoodsController">
+            <summary>
+            商品信息
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.#ctor(RestaurantErp.Service.GoodsServer,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="goodsServer"></param>
+            <param name="env"></param>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.GetOftenGoodsList">
+            <summary>
+            获取常用商品
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.Get">
+            <summary>
+            获取所有商品信息 收银页面
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.GetAllGoods(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取所有商品信息（后台商品管理）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.Get(System.Int32)">
+            <summary>
+            根据Id获取商品信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.Post(RestaurantErp.Model.Table.Goods)">
+            <summary>
+            添加一个商品
+            </summary>
+            <param name="goods"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.UpdateGoods(RestaurantErp.Model.Table.Goods)">
+            <summary>
+            修改商品
+            </summary>
+            <param name="goods"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.PostVue">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.Delete(System.String)">
+            <summary>
+            删除商品
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:RestaurantErp.Controllers.GoodsController.Upload">
+            <summary>
+            上传图片
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RestaurantErp.Controllers.OrderController">
+            <summary>
+            订单信息
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Controllers.OrderController.#ctor(RestaurantErp.Service.GoodsServer,AutoMapper.IMapper,RestaurantErp.Service.OrderServer)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="goodsServer"></param>
+            <param name="mapper"></param>
+            <param name="orderServer"></param>
+        </member>
+        <member name="M:RestaurantErp.Controllers.OrderController.AddOrder(RestaurantErp.Model.AddOrderRequest)">
+            <summary>
+            添加订单
+            </summary>
+            <param name="orderRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.OrderController.GetEntryOrderLists(System.Int32,System.Int32)">
+            <summary>
+            获取挂单跟外卖的列表信息
+            </summary>
+            <param name="OrderType"></param>
+            <param name="OrderState"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Controllers.OrderController.Delete(System.Int32)">
+            <summary>
+            删除商品
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:RestaurantErp.Controllers.OrderController.CheckOut(System.Int32)">
+            <summary>
+            结账
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RestaurantErp.Dto.AddOrderInfoDto">
+            <summary>
+            添加订单信息dto
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.AddOrderInfoDto.count">
+            <summary>
+            商品量
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.AddOrderInfoDto.goodsId">
+            <summary>
+            商品ID
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.AddOrderInfoDto.goodsName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.AddOrderInfoDto.goodsType">
+            <summary>
+            商品类型
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.AddOrderInfoDto.price">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Dto.EntryOrderListDto">
+            <summary>
+            挂单 外卖
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.OrderId">
+            <summary>
+            主订单Id
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.OrderPrice">
+            <summary>
+            订单总价
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.OrderType">
+            <summary>
+            订单类型
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.OrderState">
+            <summary>
+            订单状态
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.AddTime">
+            <summary>
+            下单时间
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.OrderCount">
+            <summary>
+            订单商品总量
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.OId">
+            <summary>
+            订单附表Id
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.OrdId">
+            <summary>
+            订单表外键
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.GoodsId">
+            <summary>
+            商品Id
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.Count">
+            <summary>
+            商品数量
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.Price">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.GoodsName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.EntryOrderListDto.GoodsType">
+            <summary>
+            商品类型
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Dto.GoodsListDto">
+            <summary>
+            商品信息
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.GoodsListDto.goodsId">
+            <summary>
+            商品Id
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.GoodsListDto.goodsName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.GoodsListDto.goodsImg">
+            <summary>
+            商品图片
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.GoodsListDto.goodstype">
+            <summary>
+            商品类型
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.GoodsListDto.price">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Dto.OftenGoodsDto">
+            <summary>
+            常用商品
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.OftenGoodsDto.goodsId">
+            <summary>
+            商品Id
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.OftenGoodsDto.goodsName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.OftenGoodsDto.price">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Dto.OftenGoodsDto.goodstype">
+            <summary>
+            商品类型
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Model.AddOrderRequest">
+            <summary>
+            添加订单，请求参数
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.AddOrderRequest.GoodsList">
+            <summary>
+            商品信息
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.AddOrderRequest.TotalMoney">
+            <summary>
+            商品总价
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.AddOrderRequest.TotalCount">
+            <summary>
+            商品数量
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.AddOrderRequest.OrderType">
+            <summary>
+            订单类型（1堂食 2外卖）
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.AddOrderRequest.OrderState">
+            <summary>
+            订单状态（1挂单 2已支付）
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Model.PagingInfo">
+            <summary>
+            商品列表信息
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.PagingInfo.GoodsInfo">
+            <summary>
+            商品信息
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.PagingInfo.TotalCount">
+            <summary>
+            总的行数
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.PagingInfo.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.PagingInfo.PageSize">
+            <summary>
+            分页条数
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Model.Table.Goods">
+            <summary>
+            Goods:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Model.Table.Goods.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Goods.GoodsId">
+            <summary>
+            主键Id，自增长
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Goods.GoodsName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Goods.GoodsPrice">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Goods.GoodsImg">
+            <summary>
+            商品图片
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Goods.GoodsType">
+            <summary>
+            商品类型（1汉堡 2小吃 3饮料 4套餐）
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Goods.IsHot">
+            <summary>
+            是否是常用商品
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Goods.AddTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Goods.describe">
+            <summary>
+            商品描述
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Model.Table.Order">
+            <summary>
+            Order:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Model.Table.Order.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Order.OrderId">
+            <summary>
+            主键Id，自增长
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Order.OrderCount">
+            <summary>
+            商品总量
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Order.OrderPrice">
+            <summary>
+            订单金额
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Order.IsMember">
+            <summary>
+            是否是会员
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Order.OrderType">
+            <summary>
+            订单类型（1堂食 2外卖）
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Order.OrderState">
+            <summary>
+            订单状态（1挂单 2已支付）
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Order.AddTime">
+            <summary>
+            添加时间
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.Order.describe">
+            <summary>
+            订单描述描述
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Model.Table.OrderInfo">
+            <summary>
+            OrderInfo:实体类(属性说明自动提取数据库字段的描述信息)
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Model.Table.OrderInfo.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.OrderInfo.OId">
+            <summary>
+            主键Id，自增长
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.OrderInfo.OrderId">
+            <summary>
+            订单表外键Id
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.OrderInfo.GoodsId">
+            <summary>
+            商品Id
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.OrderInfo.Count">
+            <summary>
+            商品数量
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.OrderInfo.Price">
+            <summary>
+            商品价格
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.OrderInfo.GoodsName">
+            <summary>
+            商品名称
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Model.Table.OrderInfo.GoodsType">
+            <summary>
+            商品类型
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:RestaurantErp.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RestaurantErp.Service.BaseDBConfig">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Service.BaseDBConfig.ConnectionString">
+            <summary>
+            数据库连接字符串
+            </summary>
+        </member>
+        <member name="T:RestaurantErp.Service.DataBase">
+            <summary>
+            基本数据类型
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Service.DataBase.GetConnection">
+            <summary>
+            获取连接数据库对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:RestaurantErp.Service.GoodsServer">
+            <summary>
+            商品数据操作
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Service.GoodsServer.GetGoodsById(System.Int32)">
+            <summary>
+            根据Id获取商品信息
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.GoodsServer.GetGoodsList">
+            <summary>
+            获取商品列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.GoodsServer.GetGoodsListAll(System.Int32,System.Int32,System.String)">
+            <summary>
+            获取所有商品信息 展示页
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.GoodsServer.GetOftenGoodsList">
+            <summary>
+            获取常用列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.GoodsServer.Insert(RestaurantErp.Model.Table.Goods)">
+            <summary>
+            插入一条商品数据
+            </summary>
+            <param name="goods"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.GoodsServer.Update(RestaurantErp.Model.Table.Goods)">
+            <summary>
+            修改商品信息
+            </summary>
+            <param name="goods"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.GoodsServer.Delete(System.String)">
+            <summary>
+            删除商品
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RestaurantErp.Service.OrderServer">
+            <summary>
+            订单相关数据操作
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Service.OrderServer.AddOrder(RestaurantErp.Model.Table.Order,System.Collections.Generic.IList{RestaurantErp.Model.Table.OrderInfo})">
+            <summary>
+            添加订单
+            </summary>
+            <param name="order"></param>
+            <param name="orderInfos"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.OrderServer.GetEntryOrderLists(System.Int32,System.Int32)">
+            <summary>
+            根据订单类型，跟订单状态获取挂单，外卖信息
+            </summary>
+            <param name="OrderType">订单类型（1堂食 2外卖）</param>
+            <param name="OrderState">订单状态（1挂单 2已支付）</param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.OrderServer.DelOrderInfo(System.Int32)">
+            <summary>
+            删除订单信息
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RestaurantErp.Service.OrderServer.CheckOutOrder(System.Int32)">
+            <summary>
+            结账
+            </summary>
+            <param name="orderId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RestaurantErp.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:RestaurantErp.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            配置
+            </summary>
+        </member>
+        <member name="M:RestaurantErp.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            管道设置
+            </summary>
+        </member>
+    </members>
+</doc>
